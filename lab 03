@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class EvenNumbersWithLoops {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input
+        System.out.print("Enter starting number: ");
+        int start = scanner.nextInt();
+        System.out.print("Enter ending number: ");
+        int end = scanner.nextInt();
+
+        // Counting how many even numbers
+        int count = 0;
+        for (int i = start; i <= end; i++) {
+            if (i % 2 == 0) count++;
+        }
+
+        // Store even numbers in array
+        int[] evenNumbers = new int[count];
+        int index = 0;
+        for (int i = start; i <= end; i++) {
+            if (i % 2 == 0) {
+                evenNumbers[index++] = i;
+            }
+        }
+        // Printing using while loop
+        System.out.println("\nEven numbers using while loop:");
+        int i = 0;
+        while (i < evenNumbers.length) {
+            System.out.print(evenNumbers[i] + " ");
+            i++;
+        }
+        // Printing using do-while loop
+        System.out.println("\n\nEven numbers using do-while loop:");
+        i = 0;
+        if (evenNumbers.length > 0) {
+            do {
+                System.out.print(evenNumbers[i] + " ");
+                i++;
+            } while (i < evenNumbers.length);
+        } else {
+            System.out.println("No even numbers in the given range.");
+        }
+
+        scanner.close();
+    }
+}    
