@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Get the first number from user
+        System.out.print("Enter the first number: ");
+        double firstNumber = input.nextDouble();
+
+        // Get the second number from user
+        System.out.print("Enter the second number: ");
+        double secondNumber = input.nextDouble();
+
+        // Get the operator from user
+        System.out.print("Enter the operator (+, -, *, /): ");
+        char operator = input.next().charAt(0);
+
+        double result = 0;
+        boolean validOperation = true;
+
+        switch (operator) {
+            case '+':
+                result = firstNumber + secondNumber;
+                break;
+            case '-':
+                result = firstNumber - secondNumber;
+                break;
+            case '*':
+                result = firstNumber * secondNumber;
+                break;
+            case '/':
+                if (secondNumber != 0) {
+                    result = firstNumber / secondNumber;
+                } else {
+                    System.out.println("Cannot divide by zero.");
+                    validOperation = false;
+                }
+                break;
+            default:
+                System.out.println("Invalid operator.");
+                validOperation = false;
+        }
+
+        if (validOperation) {
+            System.out.println("Result: " + result);
+        }
+
+        input.close();
+    }
+}
