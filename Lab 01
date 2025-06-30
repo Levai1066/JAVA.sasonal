@@ -1,0 +1,17 @@
+ public class Main {
+    public static void main(String [] args)
+    {
+        String Name= "Mahthir Siam" ;
+        byte age = 23;
+        String mail = "mahathir07@gmail.com ";
+        String phone = "0 1645-097621";
+        String address = "coto kumera, Sitakundo, Chattorogram";
+        System.out.println("Hello CCE");
+        System.out.println(Name + " " );
+        System.out.println(age + " ");
+        System.out.println(mail + " ");
+        System.out.println(phone + " " );
+        System.out.println(address + " ");
+
+    }
+}
