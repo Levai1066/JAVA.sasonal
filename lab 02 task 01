@@ -1,0 +1,43 @@
+import java.util.Scanner; // We need this to get input!
+
+public class Main {
+
+   public static void main(String[] args) {
+
+       //  need to get the marks from the student.
+       //  use Scanner to ask the user.
+
+       Scanner myScanner = new Scanner(System.in); 
+// Create a Scanner object
+
+       System.out.print("Please enter the student's exam marks: "); 
+// Ask the user
+       int studentMarks = myScanner.nextInt(); 
+// Get the number the user types
+
+       // need to decide the grade based on the marks.
+       // use "if" statements to check different ranges of marks.
+
+       String studentGrade; // store the grade here.
+       if (studentMarks >= 90) {
+           // If the marks are 90 or more, it's an A.
+           studentGrade = "A";
+       } else if (studentMarks >= 80) {
+           // If the marks are 80 or more (but less than 90), it's a B.
+           studentGrade = "B";
+       } else if (studentMarks >= 70) {
+           // If the marks are 70 or more (but less than 80), it's a C.
+           studentGrade = "C";
+       } else if (studentMarks >= 60) {
+           // If the marks are 60 or more (but less than 70), it's a D.
+           studentGrade = "D";
+       } else {
+           // If the marks are less than 60, it's an F.
+           studentGrade = "F";
+       }
+       //  need to show the grade to the student.
+       System.out.println("The student's grade is: " + studentGrade);
+
+       myScanner.close(); // Very important to close the Scanner!
+   }
+}
